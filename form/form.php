@@ -24,16 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-
-    if (empty($name) || empty($email) || empty($password)) {
-        echo "All fields are required!";
-        exit;
-    }
-
-    // Hash the password for security
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-    // Display success message
     echo "Thank you, $name! Your email ($email) has been recorded.";
     
 }
