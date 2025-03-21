@@ -17,6 +17,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Display success message
     echo "Thank you, $name! Your email ($email) has been recorded.";
     
-    // You can store this data in a database if needed
 }
 ?>
