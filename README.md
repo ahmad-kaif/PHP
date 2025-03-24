@@ -109,3 +109,19 @@ http://yourwebsite.com:8080
  3. go to  browser to localhost:80
  
 
+
+
+ **XSS Attcak**
+ If your form uses:
+ ```php
+<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
+Then the page source will render:
+```
+
+then 
+```php
+<form action="/index.php/<script>alert('Hacked!')</script>" method="post">
+```
+📌 When the page loads, the script runs and displays an alert message!
+This can be used to steal cookies, redirect users, or inject malicious code.
+
